@@ -14,9 +14,25 @@ public class Test {
 		
 		driver.get("https://opensource-demo.orangehrmlive.com/"); 		
 		driver.manage().window().maximize();
+		
 		String titlePage = driver.getTitle();
 		
-		System.out.println("le itle est:"+titlePage);
+		if(titlePage.equals("OrangeHRM")) {
+			System.out.println("le test est reussi:");
+		}else {
+			System.out.println("le itle est a echoue");
+		}
+		
+		String urlPage = driver.getCurrentUrl();
+		System.out.println("L URL de la page est"+urlPage);
+		if(urlPage.equals("https://opensource-demo.orangehrmlive.com/")) {
+			System.out.println("le test est reussi:");
+		}else {
+			System.out.println("le title est a echoue");
+		}
+		
+		
 	}
+		
 
 }
